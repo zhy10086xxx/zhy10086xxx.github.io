@@ -214,9 +214,10 @@ function showWelcome() {
 
     try {
         //自定义文本和需要放的位置
-        document.getElementById("welcome-info").innerHTML =
-            `<b><center>🎉 欢迎信息 🎉</center>&emsp;&emsp;欢迎来自 <span>${pos}</span> 的小伙伴，${timeChange}您现在距离站长约 <span>${dist}</span> 公里，当前的IP地址为： <span>${ip}</span>， ${posdesc}</b>`;
-    } catch (err) {
+        /* document.getElementById("welcome-info").innerHTML =
+            `<b><center>🎉 欢迎信息 🎉</center>&emsp;&emsp;欢迎来自 <span>${pos}</span> 的小伙伴，${timeChange}您现在距离站长约 <span>${dist}</span> 公里，当前的IP地址为： <span>${ip}</span>， ${posdesc}</b>`; */
+         document.getElementById("welcome-info").innerHTML = `欢迎来自<span>${pos}</span>的小伙伴，${timeChange}<br>你距离站长约有<span>${dist}</span>公里，${posdesc}`;
+	} catch (err) {
         // console.log("Pjax无法获取#welcome-info元素🙄🙄🙄")
     }
 }
