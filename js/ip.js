@@ -29,7 +29,7 @@ function getDistance(e1, n1, e2, n2) {
 
 function showWelcome() {
 
-    let dist = getDistance(113.34499552, 23.15537143, ipLoacation.result.location.lng, ipLoacation.result.location.lat); //这里换成自己的经纬度
+    let dist = getDistance(105.390221, 30.877623, ipLoacation.result.location.lng, ipLoacation.result.location.lat); //这里换成自己的经纬度
     let pos = ipLoacation.result.ad_info.nation;
     let ip;
     let posdesc;
@@ -156,7 +156,7 @@ function showWelcome() {
                     posdesc = "朝观日出逐白浪，夕看云起收霞光。";
                     break;
                 case "四川省":
-                    posdesc = "康康川妹子。";
+                    posdesc = "";
                     break;
                 case "贵州省":
                     posdesc = "茅台，学生，再塞200。";
@@ -214,9 +214,8 @@ function showWelcome() {
 
     try {
         //自定义文本和需要放的位置
-        /* document.getElementById("welcome-info").innerHTML =
-            `<b><center>🎉 欢迎信息 🎉</center>&emsp;&emsp;欢迎来自 <span>${pos}</span> 的小伙伴，${timeChange}您现在距离站长约 <span>${dist}</span> 公里，当前的IP地址为： <span>${ip}</span>， ${posdesc}</b>`; */
-         document.getElementById("welcome-info").innerHTML = `欢迎来自<span>${pos}</span>的小伙伴，${timeChange}<br>你距离站长约有<span>${dist}</span>公里，${posdesc}`;
+        document.getElementById("welcome-info").innerHTML =
+            `<b><center>🎉 欢迎信息 🎉</center>&emsp;&emsp;欢迎来自 <span>${pos}</span> 的小伙伴，${timeChange}您现在距离站长约 <span>${dist}</span> 公里，当前的IP地址为： <span>${ip}</span>， ${posdesc}</b>`;
 	} catch (err) {
         // console.log("Pjax无法获取#welcome-info元素🙄🙄🙄")
     }
