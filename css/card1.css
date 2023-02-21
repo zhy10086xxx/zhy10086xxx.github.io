@@ -2,11 +2,16 @@
 #aside-content > .card-widget.card-info {
   background: linear-gradient(
     -45deg,
-    #e8d8b9,
+/*     #e8d8b9,
     #eccec5,
     #a3e9eb,
     #bdbdf0,
-    #eec1ea
+    #eec1ea */
+	white,
+	white,
+	gray,
+	gray,
+	white
   );
   box-shadow: 0 0 5px rgb(66, 68, 68);
   position: relative;
@@ -14,6 +19,12 @@
   -webkit-animation: Gradient 10s ease infinite;
   -moz-animation: Gradient 10s ease infinite;
   animation: Gradient 10s ease infinite !important;
+}
+.author-info__description {
+    color: black;
+}
+.author-info__name {
+    color: black;
 }
 @-webkit-keyframes Gradient {
   0% {
@@ -56,6 +67,6 @@
 
 /* 个人信息Follow me按钮 */
 #aside-content > .card-widget.card-info > #card-info-btn {
-  background-color: #3eb8be;
+  background-color: black/* #3eb8be */;
   border-radius: 8px;
 }
