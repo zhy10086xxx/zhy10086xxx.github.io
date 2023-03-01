@@ -2,16 +2,11 @@
 #aside-content > .card-widget.card-info {
   background: linear-gradient(
     -45deg,
-/*     #e8d8b9,
+    #e8d8b9,
     #eccec5,
     #a3e9eb,
     #bdbdf0,
-    #eec1ea */
-	white,
-	white,
-	gray,
-	gray,
-	white
+    #eec1ea
   );
   box-shadow: 0 0 5px rgb(66, 68, 68);
   position: relative;
@@ -64,9 +59,71 @@
 [data-theme="dark"] #aside-content > .card-widget.card-info {
   background: #191919ee;
 }
-
+[data-theme="dark"] .author-info__description{
+  color: white;
+}
+[data-theme="dark"] .author-info__name {
+  color: white;
+}
 /* 个人信息Follow me按钮 */
 #aside-content > .card-widget.card-info > #card-info-btn {
   background-color: black/* #3eb8be */;
   border-radius: 8px;
+}
+/* 翻页按钮居中 */
+#pagination {
+  width: 100%;
+  margin: auto;
+}
+
+/* 首页文章卡片 */
+#recent-posts > .recent-post-item {
+  border-radius: 25px;
+  border: 1px solid rgba(169, 169, 169, 0.7);
+  background: rgba(253, 253, 253, 95%);
+  visibility: visible;
+  animation-duration: 2s;
+  animation-delay: 200ms;
+  animation-iteration-count: 1;
+  animation-name: zoomIn;
+}
+/* 首页文章卡片鼠标悬浮放大 */
+@keyframes zoomIn{
+0% {
+    opacity: 0;
+    -webkit-transform: scale3d(.3,.3,.3);
+    transform: scale3d(.3,.3,.3);
+}
+50% {
+  opacity: 1;
+}
+}
+
+[data-theme="dark"] #recent-posts > .recent-post-item{
+  background: rgba(25, 25, 25, 95%);
+}
+
+
+
+/* 侧边栏 */
+#aside-content .card-widget {
+  border-radius: 18px;
+  border: 1px solid rgba(169, 169, 169, 0.7);
+}
+/* 文章标题 */
+.article-title{
+  color: var(--text-highlight-color);
+  font-size: 19px;
+}
+/* 页面顶部 */
+#nav{
+  font-size: 1.4em;
+}
+img {
+    filter: brightness(1);
+}
+
+#twikoo .el-textarea textarea {
+    min-height: 120px!important;
+    background-size: 90px;
 }
